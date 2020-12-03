@@ -17,8 +17,7 @@ function postEmployee(){
         body: JSON.stringify({
             EmpFName: EmployeeFName,
             EmpLName: EmployeeLName,
-            Dept: EmployeeDept,
-            EmployerID: 1
+            Dept: EmployeeDept
         })
     })
     .then((response)=>{
