@@ -1,0 +1,26 @@
+.navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.banner{
+    background-color: white;
+    color: black;
+    margin-top: 50px;
+    text-align: center;
+    padding: 100px 0;
+}
+#shopping-cart{
+    height: 500px;
+}
+
+#but1{
+    justify-content: center;
+}
+#but2{
+    position: absolute;
+    right: 60;
+    top: 30;
+}
