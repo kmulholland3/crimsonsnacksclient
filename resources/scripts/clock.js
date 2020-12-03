@@ -1,5 +1,6 @@
 function postTimeIn(){
-    const postClocksApiUrl = "https://localhost:5001/api/clocks";
+    //const postClocksApiUrl = "https://localhost:5001/api/clocks";
+    const postClocksApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/clocks";
     //const empid = getCookie("EmpID");
     //console.log(empid);
     var TimeIn = new Date();
@@ -32,7 +33,8 @@ function postTimeIn(){
 }
 
 function getClocks(){
-    const allClocksApiUrl = "https://localhost:5001/api/clocks";
+    //const allClocksApiUrl = "https://localhost:5001/api/clocks";
+    const allClocksApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/clocks";
 
     fetch(allClocksApiUrl).then(function(response){
         console.log(response);
@@ -51,7 +53,8 @@ function getClocks(){
 }
 
 function getClocksForUpdate(empid){
-    const allClocksApiUrl = "https://localhost:5001/api/clocks";
+    //const allClocksApiUrl = "https://localhost:5001/api/clocks";
+    const allClocksApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/clocks";
     var empId = document.getElementById("EmpID").value;
     var employeeid = parseInt(empId, 10);
 
@@ -81,7 +84,8 @@ function getClocksForUpdate(empid){
 putClockOut = function(id, empid, timein){
     console.log(empid);
     console.log(timein);
-    const putClockApiUrl = "https://localhost:5001/api/clocks/" + id;
+    //const putClockApiUrl = "https://localhost:5001/api/clocks/" + id;
+    const putClockApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/clocks" + id;
     console.log(putClockApiUrl);
     const TimeOut = new Date();
     console.log(TimeOut);
@@ -103,7 +107,8 @@ putClockOut = function(id, empid, timein){
 }
 
 function getClocksReport(){
-    const allEmployeesApiUrl = "https://localhost:5001/api/accounts";
+   //const allEmployeesApiUrl = "https://localhost:5001/api/accounts";
+   const allEmployeesApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/accounts";
     var arr = [];
 
 
@@ -121,7 +126,8 @@ function getClocksReport(){
         console.log(error);
     });
 
-    const allClocksApiUrl = "https://localhost:5001/api/clocks";
+    //const allClocksApiUrl = "https://localhost:5001/api/clocks";
+    const allClocksApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/clocks";
     var daysAgo = new Date();
     daysAgo.setDate(daysAgo.getDate() - 14);
     console.log(daysAgo);

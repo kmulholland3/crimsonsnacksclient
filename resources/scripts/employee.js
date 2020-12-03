@@ -1,5 +1,6 @@
 function postEmployee(){
-    const postEmployeeApiUrl = "https://localhost:5001/api/accounts";
+    //const postEmployeeApiUrl = "https://localhost:5001/api/accounts";
+    const postEmployeeApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/accounts";
     const EmployeeFName = document.getElementById("EmpName").value;
     console.log(EmployeeFName);
     const EmployeeLName = document.getElementById("EmpLName").value;
@@ -26,8 +27,8 @@ function postEmployee(){
     })
 }
 function getEmployees(){
-    const allEmployeesApiUrl = "https://localhost:5001/api/accounts";
-
+    //const allEmployeesApiUrl = "https://localhost:5001/api/accounts";
+    const allEmployeesApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/accounts";
     fetch(allEmployeesApiUrl).then(function(response){
         console.log(response);
         return response.json();
@@ -43,7 +44,8 @@ function getEmployees(){
     });
 }
 function getEmployeesForDelete(){
-    const allEmployeesApiUrl = "https://localhost:5001/api/accounts";
+    //const allEmployeesApiUrl = "https://localhost:5001/api/accounts";
+    const allEmployeesApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/accounts";
 
     fetch(allEmployeesApiUrl).then(function(response){
         console.log(response);
@@ -62,7 +64,8 @@ function getEmployeesForDelete(){
 }
 deleteEmployee = function(id){
     console.log(id);
-    const deleteEmployeeApiUrl = "https://localhost:5001/api/accounts/" + id;
+    //const deleteEmployeeApiUrl = "https://localhost:5001/api/accounts/" + id;
+    const deleteEmployeeApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/accounts/" +id;
 
     fetch(deleteEmployeeApiUrl, {
         method: "DELETE",
@@ -77,7 +80,8 @@ deleteEmployee = function(id){
     })
 }
 function validateEmployee(EmpID){
-    const checkEmployeesApiUrl = "https://localhost:5001/api/accounts";
+    //const checkEmployeesApiUrl = "https://localhost:5001/api/accounts";
+    const checkEmployeesApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/accounts";
     console.log("validate employee");
 
     fetch(checkEmployeesApiUrl).then(function(response){

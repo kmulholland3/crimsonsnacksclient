@@ -1,5 +1,6 @@
 function getEmployers(){
-    const allEmployersApiUrl = "https://localhost:5001/api/employers";
+    //const allEmployersApiUrl = "https://localhost:5001/api/employers";
+    const allEmployersApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/employers";
 
     fetch(allEmployersApiUrl).then(function(response){
         console.log(response);
@@ -17,7 +18,8 @@ function getEmployers(){
 }
 
 function postEmployer(){
-    const postEmployerApiUrl = "https://localhost:5001/api/employers";
+  //const postEmployerApiUrl = "https://localhost:5001/api/employers";
+  const postEmployerApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/employers";
     const EmployerUserName = document.getElementById("UserName").value;
     console.log(EmployerUserName);
     const EmployerPassword = document.getElementById("Password").value;
@@ -41,7 +43,8 @@ function postEmployer(){
 }
 
 function validate(UserName, Password){
-    const checkEmployersApiUrl = "https://localhost:5001/api/employers";
+   //const checkEmployersApiUrl = "https://localhost:5001/api/employers";
+   const checkEmployersApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/employers";
 
     fetch(checkEmployersApiUrl).then(function(response){
         console.log(response);
@@ -67,7 +70,8 @@ function validate(UserName, Password){
 
 deleteEmployer = function(id){
     console.log(id);
-    const deleteEmployerApiUrl = "https://localhost:5001/api/employers/" + id;
+    //const deleteEmployerApiUrl = "https://localhost:5001/api/employers/" + id;
+    const deleteEmployerApiUrl = "https://crimsonsnacksapi.herokuapp.com/api/employers" + id;
 
     fetch(deleteEmployerApiUrl, {
         method: "DELETE",
