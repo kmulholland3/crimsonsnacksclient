@@ -81,7 +81,7 @@ function validate(UserName, Password)
             }
             else
             {
-                location.href = 'employee.html';
+                location.href = 'employerloginpage.html';
             }
             // json.forEach((employer)=>{
             //     console.log(employer.userName);
